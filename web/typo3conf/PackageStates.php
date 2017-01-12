@@ -174,6 +174,12 @@ return [
             'packagePath' => 'typo3/sysext/sv/',
             'suggestions' => [],
         ],
+        't3editor' => [
+            'composerName' => 'typo3/cms-t3editor',
+            'state' => 'active',
+            'packagePath' => 'typo3/sysext/t3editor/',
+            'suggestions' => [],
+        ],
         't3skin' => [
             'composerName' => 'typo3/cms-t3skin',
             'state' => 'active',
@@ -192,6 +198,24 @@ return [
             'packagePath' => 'typo3/sysext/viewpage/',
             'suggestions' => [],
         ],
+        'gridelements' => [
+            'composerName' => 'GridElementsTeam/Gridelements',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/gridelements/',
+            'suggestions' => [],
+        ],
+        'vhs' => [
+            'composerName' => 'fluidtypo3/vhs',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/vhs/',
+            'suggestions' => [],
+        ],
+        'sem_ex_content' => [
+            'composerName' => 'sem_ex_content',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/sem_ex_content/',
+            'suggestions' => [],
+        ],
         'static_info_tables' => [
             'composerName' => 'sjbr/static-info-tables',
             'state' => 'active',
@@ -208,12 +232,6 @@ return [
             'composerName' => 'clickstorm/go_maps_ext',
             'state' => 'active',
             'packagePath' => 'typo3conf/ext/go_maps_ext/',
-            'suggestions' => [],
-        ],
-        'gridelements' => [
-            'composerName' => 'GridElementsTeam/Gridelements',
-            'state' => 'active',
-            'packagePath' => 'typo3conf/ext/gridelements/',
             'suggestions' => [],
         ],
         'news' => [
@@ -238,12 +256,6 @@ return [
             'composerName' => 'typo3_console',
             'state' => 'active',
             'packagePath' => 'typo3conf/ext/typo3_console/',
-            'suggestions' => [],
-        ],
-        'vhs' => [
-            'composerName' => 'fluidtypo3/vhs',
-            'state' => 'active',
-            'packagePath' => 'typo3conf/ext/vhs/',
             'suggestions' => [],
         ],
         'about' => [
@@ -346,12 +358,6 @@ return [
             'composerName' => 'typo3/cms-sys-note',
             'state' => 'inactive',
             'packagePath' => 'typo3/sysext/sys_note/',
-            'suggestions' => [],
-        ],
-        't3editor' => [
-            'composerName' => 'typo3/cms-t3editor',
-            'state' => 'inactive',
-            'packagePath' => 'typo3/sysext/t3editor/',
             'suggestions' => [],
         ],
         'taskcenter' => [

@@ -1,0 +1,8 @@
+# Include constants of FSC (fluid_styled_content)
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/Static/constants.txt">
+
+# Include constants of gridelements extension
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gridelements/Configuration/TypoScript/constants.ts" extensions="ts">
+
+# Include constants of sem_ex_continte extension
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:sem_ex_content/Configuration/TypoScript/Constants/" extensions="ts">

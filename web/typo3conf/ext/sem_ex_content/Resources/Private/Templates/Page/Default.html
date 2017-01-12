@@ -1,0 +1,20 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:layout name="Page" />
+    <f:section name="Main">
+        <main>
+
+            {v:resource.record.fal(table: 'pages', field: 'media', uid: 2)
+             -> v:iterator.first()
+             -> v:variable.set(name: 'header_background')}
+
+            
+            <div class="out_block">
+                <header style="background-image: url({header_background.url});">
+                    <f:format.raw>{content_header}</f:format.raw>
+                </header>
+            </div>
+
+        </main>
+    </f:section>
+</html>

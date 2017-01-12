@@ -1,5 +1,11 @@
 /* Auto-Generated via TYPO3\CMS\Backend\Sprite\SimpleSpriteHandler */
 
+.t3-icon-tx_gridelements_backend_layout-default {
+	background-position: 0px 0px !important;
+	background-image: url('../../typo3conf/ext/gridelements/Resources/Public/Icons/gridelements.svg') !important;
+	background-size: contain;
+}
+	
 .t3-icon-static_countries-default {
 	background-position: 0px 0px !important;
 	background-image: url('../../typo3conf/ext/static_info_tables/Resources/Public/Images/Icons/static_countries.svg') !important;
@@ -39,12 +45,6 @@
 .t3-icon-tx_gomapsext_domain_model_map-default {
 	background-position: 0px 0px !important;
 	background-image: url('../../typo3conf/ext/go_maps_ext/Resources/Public/Icons/tx_gomapsext_domain_model_map.png') !important;
-	background-size: contain;
-}
-	
-.t3-icon-tx_gridelements_backend_layout-default {
-	background-position: 0px 0px !important;
-	background-image: url('../../typo3conf/ext/gridelements/Resources/Public/Icons/gridelements.svg') !important;
 	background-size: contain;
 }
 	

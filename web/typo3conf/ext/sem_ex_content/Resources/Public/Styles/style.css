@@ -1,0 +1,794 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/roboto/Roboto-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+       url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+       url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  position: relative;
+  text-shadow: 0 0 0.5px;
+}
+  .out_block{
+    width: 1360px;
+    margin: 0 auto;
+    background-color: #eee;
+
+  }
+
+header{
+  max-width: 1360px;
+  height: 580px;
+  background: url(images/heder_fon.png) no-repeat center center ;
+  background-size: cover;
+  padding-right: 200px;
+}
+    header div.in_header_left{
+      width: 320px;
+      /*height: 100%;*/
+      display: inline-block;
+      margin-left: 200px;
+      
+    }
+      header div.header_form{
+        padding-top: 364px;
+      }
+        div.header_form input, div.header_form select{
+          margin-bottom: 8px;
+          width: 320px;
+          height: 40px;
+          background-color: rgba(256, 256, 256, 0.7); 
+          border-radius: 4px;
+          border: none;
+        }
+
+        input#name, input#phone, select#excursion{
+          padding-left: 50px;
+          text-shadow: 0 0 1px;
+        }
+        input#name{
+          background-image: url(images/p.png);
+          background-position: left center;
+          background-repeat: no-repeat;
+        }
+        input#phone{
+          background-image: url(images/t.png);
+          background-position: left center;
+          background-repeat: no-repeat;
+        }
+        select#excursion{
+          background-image: url(images/d.png);
+          background-position: left center;
+          background-repeat: no-repeat;
+        }
+        input#button{
+          width: 320px;
+          height: 40px;
+          background-color: #4caf50;
+          border-radius: 4px;
+          color: #fffefe;
+          font-family: 'Roboto';
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 24px;
+          text-shadow: 0 0 1px;
+        }
+
+
+nav{
+  height: 105px;
+
+}
+nav .nav input{
+  
+  border: none;
+  background: none;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 16px;
+}
+  nav .nav input.check{
+    color: white;
+    background-color: #4caf50;
+    border-radius: 4px;
+  }
+
+  ul.nav {
+    margin-left: 200px;
+    padding-left: 0px;
+    list-style: none;
+    height: 105px;
+    padding-top: 32px;
+  }
+
+    ul.nav span{
+      color: black;
+      font-family: MaterialDesignIcons;
+      font-weight: 300;
+      margin-left: 15px;
+    }
+      ul.nav li{
+        display: inline-block;
+      }
+      ul.nav li:hover{
+        color: white;
+        background-color: #4caf50;
+        border-radius: 4px;
+      }
+        .input_in_nav_lviv{
+          width: auto;
+          padding-left: 10px;
+          padding-right: 10px;
+          height: 40px;
+          border-radius: 4px;
+          text-shadow: 0 0 1px;
+        }
+        .input_in_nav_bus{
+          width: auto;
+          padding-left: 10px;
+          padding-right: 10px;
+          height: 40px;
+          border-radius: 4px;
+          text-shadow: 0 0 1px;
+        }
+        .input_in_nav_all{
+          width: auto;
+          padding-left: 10px;
+          padding-right: 10px;
+          height: 40px;
+          border-radius: 4px;
+          text-shadow: 0 0 1px;
+        }
+
+
+  .in_header_right{
+    width: 630px;
+    height: 580px;
+    clear: both;
+    float: right;
+  }
+      .in_header_right_top{
+        height: 100px;
+      }
+          .header_contacts{
+            margin-top: 40px;
+            color: white;
+            font-family: 'Roboto';
+            font-size: 16px;
+            font-weight: 300;
+          }
+              .contacts{
+                text-align: right;
+              }
+              .header_contacts span {
+                margin-left: 15px;
+              }
+          .header_nav{
+            text-align: right;
+          }
+              ul.in_heder_nav {
+                padding-left: 0px;
+                list-style: none;
+                
+              }
+                  ul.in_heder_nav li{
+                    display: inline-block;
+                    color: white;
+                    font-family: 'Roboto';
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 40px;
+                    margin-left: 30px;
+                  }
+                  ul.in_heder_nav li:hover{
+                    text-decoration: underline;
+                    cursor: pointer;
+                  }
+
+      .in_header_right_bottom{
+        height: 184px;
+        width: 500px;
+        float: right;
+        margin-top: 224px;
+      }
+          .in_header_right_bottom .description{
+            color: white;
+            font-family: 'Roboto';
+            font-size: 32px;
+            font-weight: 300;
+            line-height: 40px;
+            text-align: right;
+          }
+          .in_header_right_bottom .slogan{
+            color: white;
+            font-family: 'Roboto';
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 40px;
+            text-align: right;
+          }
+          .ua, .ru, .en{
+            display: inline;
+            height: 23px;
+            width: 38px;
+            float: right;
+            margin-left: 16px;
+            margin-top: 21px;
+            position: relative;
+            left:-115px;
+          }
+            .ua{
+              background-image: url(images/ukr.png);
+              background-size: cover;
+  
+            }
+            .ru{
+              background-image: url(images/rus.png);
+              background-size: cover;
+            }
+            .en{
+              background-image: url(images/eng.png);
+              background-size: cover;
+              
+            }
+
+
+section.excursions{
+  margin-top: -4px;
+  width: 100%;
+}
+
+.container{
+  width: 968px;
+  margin: 0 auto;
+}
+.col-md-3{
+  padding:4px !important;
+  
+}
+  .col-md-3 .in_row{
+    height: 316px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0.5px 0.9px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+    .col-md-3 div.foto{
+      height: 186px;
+      background-size: auto auto;
+      border-radius: 4px 4px 0 0;
+    }
+        div.shadow_eye{
+          height:186px;
+        }
+        div.shadow_eye:hover{
+          background-color: rgba(0,0,0,0.5);
+          border-radius: 4px 4px 0 0;
+          background-image: url(images/oko.png);
+          background-position: center center;
+          background-repeat: no-repeat; 
+        }
+
+    .in_row div.desription{
+      padding: 20px 25px;
+    }
+      .in_row div.desription .name_ex{
+        height: 67px;
+        color: #616161;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+      }
+      .in_row div.desription .price{
+        font-weight: 400;
+        line-height: 18px;
+        color: #757575;
+        font-family: Roboto;
+        font-size: 16px;
+      }
+        .name_ex:hover{
+          text-decoration: underline;
+        }
+
+    /*.col-md-3 div.price{
+      height: 130px;
+    }*/
+
+section.reviews{
+    background-color: white;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+    .reviews .head_rev{
+      color:black;
+      font-family: 'Roboto';
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 24px;
+      padding-top: 30px;
+      padding-bottom: 15px;
+      text-align: center;
+    }
+    hr.line{
+      width: 100px;
+      height: 2px;
+      background-color: #4caf50;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+    .review_content{
+      padding-left: 200px;
+      padding-right: 200px;
+
+      background: url(images/kov.png) no-repeat right top content-box;
+      
+    }
+        .review_content .review{
+          color: black;
+          font-family: 'Roboto';
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 24px;
+          text-align: justify;
+        }
+        .review_content .author{
+          font-size: 16px;
+          line-height: 24px;
+          color: black;
+          font-weight: 400;
+          text-align: right;
+          font-family: 'Roboto';
+        }
+
+.make_reviews{
+  height: 409px;
+  background: url(images/make_rev.png);
+}
+    .make_reviews .head_make_rev{
+      text-align: center;
+      color: white;
+      font-family: 'Roboto';
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 40px;
+      padding-top:20px;
+      margin:0;
+      padding-bottom: 20px; 
+    }
+    .review_form{
+      width: 320px;
+      height: 290px;
+      margin:0 auto;
+    }
+        .review_form input{
+          width: 320px;
+          height: 40px;
+          background-color: white;
+          border-radius: 4px;
+          border: none;
+          margin-bottom: 8px;
+          text-shadow: 0 0 1px;
+        }
+        .review_form #name_review{
+          color: #4caf50;
+          font-family: 'Roboto';
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 24px;
+          background-image: url(images/name_rev.png);
+          background-position: 8px center;
+          background-repeat: no-repeat;
+          padding-left: 30px;
+        }
+        .review_form #mail_review{
+          color: #4caf50;
+          font-family: "Myriad Pro";
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          background-image: url(images/mail_rev.png);
+          background-position: 8px center;
+          background-repeat: no-repeat;
+          padding-left: 30px;
+        }
+        .review_form #review{
+          height: 144px;
+          color: #4caf50;
+          font-family: 'Roboto';
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 24px;
+          background-image: url(images/content_rev.png);
+          background-position: 8px center;
+          background-repeat: no-repeat;
+          padding-left: 30px;
+        }
+        .review_form #button_review{
+          background-color: #2e7d32;
+          color: white;
+          font-family: 'Roboto';
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 24px;
+        }
+
+        .review_form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          color: #4caf50;
+          font-family: Roboto;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 24px;
+        }
+        .review_form input::-moz-placeholder { /* Firefox 19+ */
+          color: #4caf50;
+          font-family: Roboto;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 24px;
+        }
+        .review_form input:-ms-input-placeholder { /* IE 10+ */
+          color: #4caf50;
+          font-family: Roboto;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 24px;
+        }
+        .review_form input:-moz-placeholder { /* Firefox 18- */
+          color: #4caf50;
+          font-family: Roboto;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 24px;
+        }
+  
+
+footer{
+  height: 103px;
+  padding-left: 200px;
+  padding-right: 200px;
+  background-color: #313131;
+}
+    .in_futer{
+      
+    }
+        .in_foot_left{
+          height: 103px;
+          float:left;
+          width: 300px;
+          font-family: 'Roboto';
+          font-size: 16px;
+          line-height: 24px;
+          color: white;
+          font-weight: 300;
+          padding-top: 40px;
+        }
+            
+        .in_foot_right{
+          height: 103px;
+          float: right;
+          color: white;
+          font-family: 'Roboto';
+          font-size: 16px;
+          font-weight: 300;
+          padding-top: 40px;
+        }
+
+        
+
+
+.excursion_describe{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.8);
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 1;
+  overflow-y: scroll;
+  color: white;
+  display: none;
+}
+    .in_excursion_describe{
+      width:960px;
+      margin: 0 auto;
+      padding-top: 40px;
+      text-align: center;
+    }
+      .in_excursion_describe  p.name_excursion{
+        color: white;
+        font-family: Roboto;
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 24px;
+        padding-bottom: 30px;
+      }
+      .close{
+        height: 40px;
+        width: 40px;
+        background: url(images/Ñ%2585.png) no-repeat center center ;
+        background-size: cover;
+        color:white;
+        opacity:1;
+        
+      }
+      .close_in_ex{
+        position: relative;
+        left:-160px;
+      }
+
+      .excursion_describe_content{
+        background-color: white;
+        padding-bottom: 30px;
+      }
+          .main_foto{
+            height: 400px;
+            width: 100%;
+            margin-bottom: 9px;
+          }
+          .all_foto{
+            height: 150px;
+            width: 100%;
+
+          }
+              .smal_foto{
+                height: 150px;
+                width:25%;
+                background-color: green;
+                float: left;
+                background-size: cover;
+              }
+          .addition_info{
+            min-height: 77px;
+            width: 100%;
+            background-color: #4caf50;
+            text-align: left;
+            padding: 10px;
+          }
+              .addition_info b{
+                /*font-weight: 600;*/
+              }
+
+          .main_description{
+            width: 100%;
+            color: black;
+            font-family: 'Roboto';
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+            text-align: justify;
+            padding:15px 10px 50px;
+          }
+          .button_review{
+            width: 200px;
+            height: 40px;
+            background-color: #388e3c;
+            border-radius: 4px;
+            margin: 0 auto;
+            color: white;
+            font-family: 'Roboto';
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+          }
+  .order_excursion{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.8);
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 2;
+    overflow-y: scroll;
+    color: white;
+    display: none;
+  }
+    .in_order_excursion{
+      width: 414px;
+      height: 370px;
+      margin: 0 auto;
+      margin-top: 100px;
+      text-align: center;
+    }
+      .in_order_excursion p.name{
+        color: white;
+        font-family: Roboto;
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 24px;
+        padding-bottom: 30px;
+      }
+      .in_order_excursion .order_form{
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 414px;
+        height: 356px;
+        background-color: white;
+        border-radius: 4px;
+        padding-top: 32px;
+      }
+           #order_name{
+            height: 40px;
+            background-color: rgba(0,0,0, 0.7);
+            border-radius: 4px;
+            color: white;
+            font-family: 'Roboto';
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+            background-image: url(images/p_o_f.png);
+            background-position: left center;
+            background-repeat: no-repeat;
+            padding-left: 50px;
+          }
+          #order_phone{
+            height: 40px;
+            background-color: rgba(0,0,0, 0.7);
+            border-radius: 4px;
+            color: white;
+            font-family: 'Roboto';
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+            margin-top: 8px;
+            background-image: url(images/ph_o_f.png);
+            background-position: left center;
+            background-repeat: no-repeat;
+            padding-left: 50px;
+          }
+          #order_excursion{
+            height: 40px;
+            background-color: rgba(0,0,0, 0.7);
+            border-radius: 4px;
+            color: white;
+            font-family: 'Roboto';
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+            margin-top: 8px;
+            background-image: url(images/e_o_f.png);
+            background-position: left center;
+            background-repeat: no-repeat;
+            padding-left: 50px;
+          }
+
+          #order_number{
+            height: 40px;
+            background-color: rgba(0,0,0, 0.7);
+            border-radius: 4px;
+            color: white;
+            font-family: 'Roboto';
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+            margin-top: 8px;
+            background-image: url(images/e_o_f.png);
+            background-position: left center;
+            background-repeat: no-repeat;
+            padding-left: 50px;
+          }
+
+          #order_wish{
+            height: 40px;
+            background-color: rgba(0,0,0, 0.7);
+            border-radius: 4px;
+            color: white;
+            font-family: 'Roboto';
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+            margin-top: 8px;
+            background-image: url(images/a_o_f.png);
+            background-position: left center;
+            background-repeat: no-repeat;
+            padding-left: 50px;
+          }
+          #order_email{
+            height: 40px;
+            background-color: rgba(0,0,0, 0.7);
+            border-radius: 4px;
+            color: white;
+            font-family: 'Roboto';
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+            margin-top: 8px;
+            background-image: url(images/a_o_f.png);
+            background-position: left center;
+            background-repeat: no-repeat;
+            padding-left: 50px;
+          }
+          #order_button{
+            height: 40px;
+            background-color: #4caf50;
+            border-radius: 4px;
+            color: #fffefe;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+            margin-top: 8px;
+          }
+
+          .in_foot_right i.phone_in_review{
+            width: 30px;
+            font-family: 'Material Icons';
+            color: #4caf50;
+            font-size: 20px;
+            font-weight: 400;
+            position: relative;
+            top:4px;
+            left:-95px;
+          }
+          i.mail_in_review{
+            width: 30px;
+            font-family: 'Material Icons';
+            color: #4caf50;
+            font-size: 20px;
+            font-weight: 400;
+            position: relative;
+            top:4px;
+            left:10px;
+          }
+
+          i.phone_in_header{
+            width: 30px;
+            font-family: 'Material Icons';
+            color: white;
+            font-size: 20px;
+            font-weight: 400;
+            position: relative;
+            top:4px;
+            left:-95px;
+          }
+
+          i.mail_in_header{
+            width: 30px;
+            font-family: 'Material Icons';
+            color: white;
+            font-size: 20px;
+            font-weight: 400;
+            position: relative;
+            top:4px;
+            left:5px;
+          }
+
+          .glyphicon-ok-circle{
+            font-weight: 100;
+            line-height: 18px;
+            color: #4caf50;
+            font-size: 17px;
+            text-shadow: none;
+            top: 3px;
+          }
+
+          .glyphicon-menu-right{
+            font-weight: 100;
+            line-height: 15px;
+            color: #4caf50;
+            font-size: 13px;
+            text-shadow: none;
+            position: relative;
+            top: 4px;
+            text-align: right;
+            float: right;
+          }
+          .glyphicon-menu-right:last-child{
+            position: relative;
+            left: 8px;
+          }

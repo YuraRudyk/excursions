@@ -1106,6 +1106,108 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks'][\TYPO3\CMS\Sched
 
 
 /**
+ * Extension: t3editor
+ * File: /var/www/excursions/source/web/typo3/sysext/t3editor/ext_localconf.php
+ */
+
+$_EXTKEY = 't3editor';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY];
+
+
+defined('TYPO3_MODE') or die();
+
+if (TYPO3_MODE === 'BE') {
+    // Register hooks for tstemplate module
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['typo3/template.php']['preStartPageHook'][] = \TYPO3\CMS\T3editor\Hook\TypoScriptTemplateInfoHook::class . '->preStartPageHook';
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/tstemplate_info/class.tx_tstemplateinfo.php']['postOutputProcessingHook'][] = \TYPO3\CMS\T3editor\Hook\TypoScriptTemplateInfoHook::class . '->postOutputProcessingHook';
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/t3editor/classes/class.tx_t3editor.php']['ajaxSaveCode']['tx_tstemplateinfo'] = \TYPO3\CMS\T3editor\Hook\TypoScriptTemplateInfoHook::class . '->save';
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/t3editor/classes/class.tx_t3editor.php']['ajaxSaveCode']['file_edit'] = \TYPO3\CMS\T3editor\Hook\FileEditHook::class . '->save';
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['typo3/template.php']['preStartPageHook'][] = \TYPO3\CMS\T3editor\Hook\FileEditHook::class . '->preStartPageHook';
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['typo3/file_edit.php']['preOutputProcessingHook'][] = \TYPO3\CMS\T3editor\Hook\FileEditHook::class . '->preOutputProcessingHook';
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['typo3/file_edit.php']['postOutputProcessingHook'][] = \TYPO3\CMS\T3editor\Hook\FileEditHook::class . '->postOutputProcessingHook';
+}
+
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['formEngine']['nodeRegistry'][1433089350] = [
+    'nodeName' => 't3editor',
+    'priority' => 40,
+    'class' => \TYPO3\CMS\T3editor\Form\Element\T3editorElement::class,
+];
+
+
+/**
+ * Extension: gridelements
+ * File: /var/www/excursions/source/web/typo3conf/ext/gridelements/ext_localconf.php
+ */
+
+$_EXTKEY = 'gridelements';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY];
+
+
+if (!defined('TYPO3_MODE')) {
+    die ('Access denied.');
+}
+
+$_EXTCONF = unserialize($_EXTCONF);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('
+	options.saveDocNew.tx_gridelements_backend_layout=1
+');
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPItoST43($_EXTKEY, 'Classes/Plugin/Gridelements.php', '_pi1',
+    'CType', 1);
+
+// XCLASS
+if ($_EXTCONF['nestingInListModule']) {
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects']['TYPO3\\CMS\\Recordlist\\RecordList\\DatabaseRecordList'] = array('className' => 'GridElementsTeam\\Gridelements\\Xclass\\DatabaseRecordList',);
+}
+
+
+/**
+ * Extension: vhs
+ * File: /var/www/excursions/source/web/typo3conf/ext/vhs/ext_localconf.php
+ */
+
+$_EXTKEY = 'vhs';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY];
+
+
+if (!defined('TYPO3_MODE')) {
+	die('Access denied.');
+}
+
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_fe.php']['usePageCache'][] = 'FluidTYPO3\\Vhs\\Service\\AssetService';
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_fe.php']['contentPostProc-output'][] = 'FluidTYPO3\\Vhs\\Service\\AssetService->buildAllUncached';
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['clearCachePostProc'][] = 'FluidTYPO3\\Vhs\\Service\\AssetService->clearCacheCommand';
+$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= (TRUE === empty($GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields']) ? '' : ',') . 'nav_hide';
+
+if (FALSE === is_array($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['vhs_main'])) {
+	$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['vhs_main'] = [
+		'frontend' => 'TYPO3\\CMS\\Core\\Cache\\Frontend\\StringFrontend',
+		'options' => [
+			'defaultLifetime' => 804600
+		],
+		'groups' => ['pages', 'all']
+	];
+}
+
+if (FALSE === is_array($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['vhs_markdown'])) {
+	$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['vhs_markdown'] = [
+		'frontend' => 'TYPO3\\CMS\\Core\\Cache\\Frontend\\StringFrontend',
+		'options' => [
+			'defaultLifetime' => 804600
+		],
+		'groups' => ['pages', 'all']
+	];
+}
+
+// add url and urltype to fix the rendering of external url doktypes
+if (FALSE === empty($GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'])) {
+	$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= ',';
+}
+$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= 'url,urltype';
+
+
+/**
  * Extension: static_info_tables
  * File: /var/www/excursions/source/web/typo3conf/ext/static_info_tables/ext_localconf.php
  */
@@ -1271,34 +1373,6 @@ $TYPO3_CONF_VARS['EXTCONF']['cms']['db_layout']['addTables']['tx_gomapsext_domai
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tce']['formevals'][\Clickstorm\GoMapsExt\Evaluation\Double6Evaluator::class] = '';
 
 
-
-
-/**
- * Extension: gridelements
- * File: /var/www/excursions/source/web/typo3conf/ext/gridelements/ext_localconf.php
- */
-
-$_EXTKEY = 'gridelements';
-$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY];
-
-
-if (!defined('TYPO3_MODE')) {
-    die ('Access denied.');
-}
-
-$_EXTCONF = unserialize($_EXTCONF);
-
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('
-	options.saveDocNew.tx_gridelements_backend_layout=1
-');
-
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPItoST43($_EXTKEY, 'Classes/Plugin/Gridelements.php', '_pi1',
-    'CType', 1);
-
-// XCLASS
-if ($_EXTCONF['nestingInListModule']) {
-    $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects']['TYPO3\\CMS\\Recordlist\\RecordList\\DatabaseRecordList'] = array('className' => 'GridElementsTeam\\Gridelements\\Xclass\\DatabaseRecordList',);
-}
 
 
 /**
@@ -1638,51 +1712,6 @@ if (!is_array($GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks']['T
         'expireField' => 'expire',
     );
 }
-
-
-/**
- * Extension: vhs
- * File: /var/www/excursions/source/web/typo3conf/ext/vhs/ext_localconf.php
- */
-
-$_EXTKEY = 'vhs';
-$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY];
-
-
-if (!defined('TYPO3_MODE')) {
-	die('Access denied.');
-}
-
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_fe.php']['usePageCache'][] = 'FluidTYPO3\\Vhs\\Service\\AssetService';
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_fe.php']['contentPostProc-output'][] = 'FluidTYPO3\\Vhs\\Service\\AssetService->buildAllUncached';
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['clearCachePostProc'][] = 'FluidTYPO3\\Vhs\\Service\\AssetService->clearCacheCommand';
-$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= (TRUE === empty($GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields']) ? '' : ',') . 'nav_hide';
-
-if (FALSE === is_array($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['vhs_main'])) {
-	$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['vhs_main'] = [
-		'frontend' => 'TYPO3\\CMS\\Core\\Cache\\Frontend\\StringFrontend',
-		'options' => [
-			'defaultLifetime' => 804600
-		],
-		'groups' => ['pages', 'all']
-	];
-}
-
-if (FALSE === is_array($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['vhs_markdown'])) {
-	$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['vhs_markdown'] = [
-		'frontend' => 'TYPO3\\CMS\\Core\\Cache\\Frontend\\StringFrontend',
-		'options' => [
-			'defaultLifetime' => 804600
-		],
-		'groups' => ['pages', 'all']
-	];
-}
-
-// add url and urltype to fix the rendering of external url doktypes
-if (FALSE === empty($GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'])) {
-	$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= ',';
-}
-$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= 'url,urltype';
 
 
 #
