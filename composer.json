@@ -1,0 +1,72 @@
+{
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://composer.typo3.org"
+        }
+    ],
+    "require": {
+        "typo3/cms": "^7.6",
+        "typo3/cms-belog": "^7.6",
+        "typo3/cms-beuser": "^7.6",
+        "typo3/cms-context-help": "^7.6",
+        "typo3/cms-fluid-styled-content": "^7.6",
+        "typo3/cms-felogin": "^7.6",
+        "typo3/cms-filelist": "^7.6",
+        "typo3/cms-impexp": "^7.6",
+        "typo3/cms-info": "^7.6",
+        "typo3/cms-info-pagetsconfig": "^7.6",
+        "typo3/cms-lowlevel": "^7.6",
+        "typo3/cms-reports": "^7.6",
+        "typo3/cms-rsaauth": "^7.6",
+        "typo3/cms-rtehtmlarea": "^7.6",
+        "typo3/cms-setup": "^7.6",
+        "typo3/cms-tstemplate": "^7.6",
+        "typo3/cms-viewpage": "^7.6",
+
+        "symfony/process": "~2.7.0",
+
+        "helhum/dotenv-connector": "^1.0.0",
+        "helhum/config-loader": "^0.1",
+        "helhum/typo3-console": "^3.0.0",
+
+        "typo3-ter/realurl": "^2.0.0",
+        "typo3-ter/static-info-tables": "^6.3.0",
+        "typo3-ter/vhs": "^3.0.0",
+        "typo3-ter/rlmp-language-detection": "^7.0.8",
+        "typo3-ter/gridelements": "^7.0.5",
+        "typo3-ter/powermail": "^3.8.0",
+        "typo3-ter/go-maps-ext": "^2.2.0",
+        "typo3-ter/news": "^5.2.0"
+
+    },
+    "extra": {
+        "typo3/cms": {
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "web-dir": "web"
+        },
+        "helhum/typo3-console": {
+            "install-binary": false
+        },
+        "helhum/dotenv-connector": {
+            "cache-dir": "var/cache"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Helhum\\TYPO3\\Distribution\\": "src/"
+        }
+    },
+
+    "scripts": {
+        "package-states": [
+            "./typo3cms install:generatepackagestates"
+        ],
+        "post-autoload-dump": [
+            "@package-states"
+        ]
+    },
+    "config": {
+        "bin-dir": "."
+    }
+}

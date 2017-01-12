@@ -1,0 +1,3 @@
+Thu, 12 Jan 2017 15:13:47 +0200 [WARNING] request="c245b8b521c34" component="TYPO3.CMS.Core.Utility.ExtensionManagementUtility": TYPO3\CMS\Core\Category\CategoryRegistry: no category registered for table "tx_gomapsext_domain_model_address". Key was already registered. 
+Thu, 12 Jan 2017 15:45:18 +0200 [WARNING] request="df0fe9de487d7" component="TYPO3.CMS.Core.Utility.ExtensionManagementUtility": TYPO3\CMS\Core\Category\CategoryRegistry: no category registered for table "tx_gomapsext_domain_model_address". Key was already registered. 
+Thu, 12 Jan 2017 16:41:01 +0200 [WARNING] request="d825c15916d06" component="TYPO3.CMS.Core.Type.File.ImageInfo": I could not retrieve the image size for file /var/www/excursions/source/web/fileadmin/user_upload/images/.png 
