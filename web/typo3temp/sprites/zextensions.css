@@ -6,6 +6,12 @@
 	background-size: contain;
 }
 	
+.t3-icon-tx_semexcontent_domain_model_headcontent-default {
+	background-position: 0px 0px !important;
+	background-image: url('../../typo3conf/ext/sem_ex_content/Resources/Public/Icons/headcontent.svg') !important;
+	background-size: contain;
+}
+	
 .t3-icon-static_countries-default {
 	background-position: 0px 0px !important;
 	background-image: url('../../typo3conf/ext/static_info_tables/Resources/Public/Images/Icons/static_countries.svg') !important;
