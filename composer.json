@@ -54,7 +54,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Helhum\\TYPO3\\Distribution\\": "src/"
+            "Helhum\\TYPO3\\Distribution\\": "src/",
+            "Rudyk\\SemExContent\\": "web/typo3conf/ext/sem_ex_content/Classes/"
         }
     },
 

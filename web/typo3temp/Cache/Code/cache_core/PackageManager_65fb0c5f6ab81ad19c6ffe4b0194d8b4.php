@@ -250,15 +250,6 @@ array (
         array (
         ),
       ),
-      't3editor' => 
-      array (
-        'composerName' => 'typo3/cms-t3editor',
-        'state' => 'active',
-        'packagePath' => 'typo3/sysext/t3editor/',
-        'suggestions' => 
-        array (
-        ),
-      ),
       't3skin' => 
       array (
         'composerName' => 'typo3/cms-t3skin',
@@ -529,6 +520,15 @@ array (
         array (
         ),
       ),
+      't3editor' => 
+      array (
+        'composerName' => 'typo3/cms-t3editor',
+        'state' => 'inactive',
+        'packagePath' => 'typo3/sysext/t3editor/',
+        'suggestions' => 
+        array (
+        ),
+      ),
       'taskcenter' => 
       array (
         'composerName' => 'typo3/cms-taskcenter',
@@ -607,7 +607,6 @@ array (
     'reports' => 'reports',
     'scheduler' => 'scheduler',
     'sv' => 'sv',
-    't3editor' => 't3editor',
     't3skin' => 't3skin',
     'tstemplate' => 'tstemplate',
     'viewpage' => 'viewpage',
@@ -638,6 +637,7 @@ array (
     'recycler' => 'recycler',
     'sys_action' => 'sys_action',
     'sys_note' => 'sys_note',
+    't3editor' => 't3editor',
     'taskcenter' => 'taskcenter',
     'version' => 'version',
     'wizard_crpages' => 'wizard_crpages',
@@ -673,7 +673,6 @@ array (
     'reports' => 'reports',
     'scheduler' => 'scheduler',
     'sv' => 'sv',
-    't3editor' => 't3editor',
     't3skin' => 't3skin',
     'tstemplate' => 'tstemplate',
     'viewpage' => 'viewpage',
@@ -704,6 +703,7 @@ array (
     'recycler' => 'recycler',
     'sys_action' => 'sys_action',
     'sys_note' => 'sys_note',
+    't3editor' => 't3editor',
     'taskcenter' => 'taskcenter',
     'version' => 'version',
     'wizard_crpages' => 'wizard_crpages',
@@ -740,19 +740,18 @@ array (
     25 => 'lowlevel',
     26 => 'reports',
     27 => 'scheduler',
-    28 => 't3editor',
-    29 => 'tstemplate',
-    30 => 'viewpage',
-    31 => 'gridelements',
-    32 => 'vhs',
-    33 => 'sem_ex_content',
-    34 => 'static_info_tables',
-    35 => 'rlmp_language_detection',
-    36 => 'go_maps_ext',
-    37 => 'news',
-    38 => 'powermail',
-    39 => 'realurl',
-    40 => 'typo3_console',
+    28 => 'tstemplate',
+    29 => 'viewpage',
+    30 => 'gridelements',
+    31 => 'vhs',
+    32 => 'sem_ex_content',
+    33 => 'static_info_tables',
+    34 => 'rlmp_language_detection',
+    35 => 'go_maps_ext',
+    36 => 'news',
+    37 => 'powermail',
+    38 => 'realurl',
+    39 => 'typo3_console',
   ),
   'requiredPackageKeys' => 
   array (
@@ -1030,14 +1029,6 @@ array (
       'ext_tables.sql' => '/var/www/excursions/source/web/typo3/sysext/scheduler/ext_tables.sql',
       'ext_icon' => 'ext_icon.png',
     ),
-    't3editor' => 
-    array (
-      'type' => 'S',
-      'siteRelPath' => 'typo3/sysext/t3editor/',
-      'typo3RelPath' => 'sysext/t3editor/',
-      'ext_localconf.php' => '/var/www/excursions/source/web/typo3/sysext/t3editor/ext_localconf.php',
-      'ext_icon' => 'ext_icon.png',
-    ),
     'tstemplate' => 
     array (
       'type' => 'S',
@@ -1078,6 +1069,7 @@ array (
       'siteRelPath' => 'typo3conf/ext/sem_ex_content/',
       'typo3RelPath' => '../typo3conf/ext/sem_ex_content/',
       'ext_tables.php' => '/var/www/excursions/source/web/typo3conf/ext/sem_ex_content/ext_tables.php',
+      'ext_tables.sql' => '/var/www/excursions/source/web/typo3conf/ext/sem_ex_content/ext_tables.sql',
       'ext_icon' => 'ext_icon.svg',
     ),
     'static_info_tables' => 
@@ -1149,6 +1141,6 @@ array (
       'ext_icon' => 'ext_icon.png',
     ),
   ),
-  'packageObjectsCacheEntryIdentifier' => 'PackageObjects_5877886ee9602388885235',
+  'packageObjectsCacheEntryIdentifier' => 'PackageObjects_5878de64bf4b2525963908',
 );
 #

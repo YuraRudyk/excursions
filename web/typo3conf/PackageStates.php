@@ -174,12 +174,6 @@ return [
             'packagePath' => 'typo3/sysext/sv/',
             'suggestions' => [],
         ],
-        't3editor' => [
-            'composerName' => 'typo3/cms-t3editor',
-            'state' => 'active',
-            'packagePath' => 'typo3/sysext/t3editor/',
-            'suggestions' => [],
-        ],
         't3skin' => [
             'composerName' => 'typo3/cms-t3skin',
             'state' => 'active',
@@ -358,6 +352,12 @@ return [
             'composerName' => 'typo3/cms-sys-note',
             'state' => 'inactive',
             'packagePath' => 'typo3/sysext/sys_note/',
+            'suggestions' => [],
+        ],
+        't3editor' => [
+            'composerName' => 'typo3/cms-t3editor',
+            'state' => 'inactive',
+            'packagePath' => 'typo3/sysext/t3editor/',
             'suggestions' => [],
         ],
         'taskcenter' => [
