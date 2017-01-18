@@ -29,7 +29,7 @@ TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
     [
         'Header content',
-        'sembizcontent_accordian',
+        'semexcontent_headcontent',
         'EXT:sem_ex_content/Resources/Public/Icons/headcontent.svg'
     ],
     'CType'

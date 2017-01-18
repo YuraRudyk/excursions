@@ -2,85 +2,85 @@
 
 .t3-icon-tx_gridelements_backend_layout-default {
 	background-position: 0px 0px !important;
-	background-image: url('../../typo3conf/ext/gridelements/Resources/Public/Icons/gridelements.svg') !important;
+	background-image: url('../../typo3/typo3conf/ext/gridelements/Resources/Public/Icons/gridelements.svg') !important;
 	background-size: contain;
 }
 	
 .t3-icon-tx_semexcontent_domain_model_headcontent-default {
 	background-position: 0px 0px !important;
-	background-image: url('../../typo3conf/ext/sem_ex_content/Resources/Public/Icons/headcontent.svg') !important;
+	background-image: url('../../typo3/typo3conf/ext/sem_ex_content/Resources/Public/Icons/headcontent.svg') !important;
 	background-size: contain;
 }
 	
 .t3-icon-static_countries-default {
 	background-position: 0px 0px !important;
-	background-image: url('../../typo3conf/ext/static_info_tables/Resources/Public/Images/Icons/static_countries.svg') !important;
+	background-image: url('../../typo3/typo3conf/ext/static_info_tables/Resources/Public/Images/Icons/static_countries.svg') !important;
 	background-size: contain;
 }
 	
 .t3-icon-static_country_zones-default {
 	background-position: 0px 0px !important;
-	background-image: url('../../typo3conf/ext/static_info_tables/Resources/Public/Images/Icons/static_country_zones.svg') !important;
+	background-image: url('../../typo3/typo3conf/ext/static_info_tables/Resources/Public/Images/Icons/static_country_zones.svg') !important;
 	background-size: contain;
 }
 	
 .t3-icon-static_currencies-default {
 	background-position: 0px 0px !important;
-	background-image: url('../../typo3conf/ext/static_info_tables/Resources/Public/Images/Icons/static_currencies.svg') !important;
+	background-image: url('../../typo3/typo3conf/ext/static_info_tables/Resources/Public/Images/Icons/static_currencies.svg') !important;
 	background-size: contain;
 }
 	
 .t3-icon-static_languages-default {
 	background-position: 0px 0px !important;
-	background-image: url('../../typo3conf/ext/static_info_tables/Resources/Public/Images/Icons/static_languages.svg') !important;
+	background-image: url('../../typo3/typo3conf/ext/static_info_tables/Resources/Public/Images/Icons/static_languages.svg') !important;
 	background-size: contain;
 }
 	
 .t3-icon-static_territories-default {
 	background-position: 0px 0px !important;
-	background-image: url('../../typo3conf/ext/static_info_tables/Resources/Public/Images/Icons/static_territories.svg') !important;
+	background-image: url('../../typo3/typo3conf/ext/static_info_tables/Resources/Public/Images/Icons/static_territories.svg') !important;
 	background-size: contain;
 }
 	
 .t3-icon-tx_gomapsext_domain_model_address-default {
 	background-position: 0px 0px !important;
-	background-image: url('../../typo3conf/ext/go_maps_ext/Resources/Public/Icons/tx_gomapsext_domain_model_address.png') !important;
+	background-image: url('../../typo3/typo3conf/ext/go_maps_ext/Resources/Public/Icons/tx_gomapsext_domain_model_address.png') !important;
 	background-size: contain;
 }
 	
 .t3-icon-tx_gomapsext_domain_model_map-default {
 	background-position: 0px 0px !important;
-	background-image: url('../../typo3conf/ext/go_maps_ext/Resources/Public/Icons/tx_gomapsext_domain_model_map.png') !important;
+	background-image: url('../../typo3/typo3conf/ext/go_maps_ext/Resources/Public/Icons/tx_gomapsext_domain_model_map.png') !important;
 	background-size: contain;
 }
 	
 .t3-icon-tx_powermail_domain_model_answer-default {
 	background-position: 0px 0px !important;
-	background-image: url('../../typo3conf/ext/powermail/Resources/Public/Icons/tx_powermail_domain_model_answer.gif') !important;
+	background-image: url('../../typo3/typo3conf/ext/powermail/Resources/Public/Icons/tx_powermail_domain_model_answer.gif') !important;
 	background-size: contain;
 }
 	
 .t3-icon-tx_powermail_domain_model_field-default {
 	background-position: 0px 0px !important;
-	background-image: url('../../typo3conf/ext/powermail/Resources/Public/Icons/tx_powermail_domain_model_field.gif') !important;
+	background-image: url('../../typo3/typo3conf/ext/powermail/Resources/Public/Icons/tx_powermail_domain_model_field.gif') !important;
 	background-size: contain;
 }
 	
 .t3-icon-tx_powermail_domain_model_form-default {
 	background-position: 0px 0px !important;
-	background-image: url('../../typo3conf/ext/powermail/Resources/Public/Icons/tx_powermail_domain_model_form.gif') !important;
+	background-image: url('../../typo3/typo3conf/ext/powermail/Resources/Public/Icons/tx_powermail_domain_model_form.gif') !important;
 	background-size: contain;
 }
 	
 .t3-icon-tx_powermail_domain_model_mail-default {
 	background-position: 0px 0px !important;
-	background-image: url('../../typo3conf/ext/powermail/Resources/Public/Icons/tx_powermail_domain_model_mail.gif') !important;
+	background-image: url('../../typo3/typo3conf/ext/powermail/Resources/Public/Icons/tx_powermail_domain_model_mail.gif') !important;
 	background-size: contain;
 }
 	
 .t3-icon-tx_powermail_domain_model_page-default {
 	background-position: 0px 0px !important;
-	background-image: url('../../typo3conf/ext/powermail/Resources/Public/Icons/tx_powermail_domain_model_page.gif') !important;
+	background-image: url('../../typo3/typo3conf/ext/powermail/Resources/Public/Icons/tx_powermail_domain_model_page.gif') !important;
 	background-size: contain;
 }
 	

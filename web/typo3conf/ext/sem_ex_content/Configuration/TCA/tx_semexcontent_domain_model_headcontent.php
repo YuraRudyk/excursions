@@ -57,9 +57,9 @@ return [
                 'items'      => [
                     ['', 0],
                 ],
-                'foreign_table'       => 'tx_sembizcontent_domain_model_accordian',
-                'foreign_table_where' => 'AND tx_sembizcontent_domain_model_accordian.pid=###CURRENT_PID### '
-                    . ' AND tx_sembizcontent_domain_model_accordian.sys_language_uid IN (-1,0)',
+                'foreign_table'       => 'tx_semexcontent_domain_model_headcontent',
+                'foreign_table_where' => 'AND tx_semexcontent_domain_model_headcontent.pid=###CURRENT_PID### '
+                    . ' AND tx_semexcontent_domain_model_headcontent.sys_language_uid IN (-1,0)',
             ]
         ],
         'l10n_diffsource' => [
@@ -150,8 +150,62 @@ return [
                 'eval' => 'trim'
             ]
         ],
-
-
+        'second_phone' => [
+            'label'  => 'second phone',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim'
+            ]
+        ],
+        'email' => [
+            'label'  => 'email',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim'
+            ]
+        ],
+        'first_menu' => [
+            'label'  => 'first menu',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim'
+            ]
+        ],
+        'second_menu' => [
+            'label'  => 'second menu',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim'
+            ]
+        ],
+        'third_menu' => [
+            'label'  => 'third menu',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim'
+            ]
+        ],
+        'fourth_menu' => [
+            'label'  => 'fourth menu',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim'
+            ]
+        ],
+        'header' => [
+            'label'  => 'header',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim'
+            ]
+        ],
+        'subheader' => [
+            'label'  => 'sub header',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim'
+            ]
+        ],
         'headcontent' => [
             'label'  => 'headcontent',
             'config' => [
@@ -162,7 +216,7 @@ return [
 
     'types' => [
         [
-            'showitem' => 'first_phone, sys_language_uid, l10n_parent, hidden'
+            'showitem' => 'first_phone, second_phone, email, first_menu, second_menu, third_menu, fourth_menu, header, subheader, sys_language_uid, l10n_parent, hidden'
         ]
     ]
     
