@@ -9,7 +9,7 @@ if (!defined('TYPO3_MODE')) {
 // ============================================
 
 $columns = [
-    'tx_semexcontent_headcontent' => [
+    'tx_semexcontent_headcontents' => [
         'label'  => 'header content',
         'config' => [
             'type'           => 'inline',

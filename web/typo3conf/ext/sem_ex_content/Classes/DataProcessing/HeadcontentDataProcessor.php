@@ -27,7 +27,8 @@ class HeadcontentDataProcessor extends AbstractDataProcessor
     ) {
         
         $processedData['headcontents'] = $this->objectManager->get(RowRepository::class)->findByUid($cObj->data['uid'])
-                                                                                        ->getHeadcontent();                                                                
+                                                                                        ->getHeadcontent();      
+                                              
         return $processedData;
     }
 }

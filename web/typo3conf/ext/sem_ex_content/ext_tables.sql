@@ -1,5 +1,5 @@
 CREATE TABLE tt_content (
-    tx_semexcontent_headcontent int(11)  DEFAULT '0' NOT NULL
+    tx_semexcontent_headcontents int(11)  DEFAULT '0' NOT NULL
 );
 
 CREATE TABLE tx_semexcontent_domain_model_headcontent (
